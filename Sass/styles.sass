@@ -1,0 +1,135 @@
+@use 'mixin'
+@use 'variables'
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    background-image: variables.$bg-image
+    @include mixin.aling-body
+    height: 100vh
+    background-repeat: no repeat
+    background-size: cover
+    font-family: 'Roboto', sans-serif
+
+    .content
+        // background: variables.$bg-blur-content
+        @include mixin.aling-content
+        box-shadow: 2px 2px 7px #333
+        backdrop-filter: blur(20px)
+        .fig-user
+            padding: 1.4rem
+            // border: 2px solid variables.$primary-color
+            border-radius: 50%
+            display: flex
+            background: #333333b2
+            align-items: center
+            justify-content: center
+            align-self: center
+            overflow: hidden
+            width: 200px
+            height: 200px
+            transition: .2s
+            cursor: pointer
+            &:hover
+                background: #cccccc00
+                color: #333333b2
+            h1
+                color: #fff
+                font-size: 6rem
+                font-weight: 100
+            img
+                width: 100%
+                height: 100%
+                filter: drop-shadow(0 0 0.3rem #2d2d2d)
+                transition: .4s
+                &:hover
+                    filter: drop-shadow(0 0 0.6rem #2d2d2d)
+        .form-inputs
+           margin: 1rem 0
+        div
+                margin: 25px 0
+                display: flex
+                justify-content: first baseline
+                border-bottom: 1px solid #ccc 
+                input
+                    padding: .5rem
+                    background: none
+                    border: none
+                    outline: none
+                    font-size: 1.3rem
+                    color: #dadada
+                input::placeholder
+                    color: #cececee3
+                i
+                    padding: .5rem
+                    font-size: 1.4rem
+                    color: variables.$secondary-color
+
+        .msg-env
+            border: none
+            color: #fff
+            font-size: .9rem
+            text-align: center
+            display: flex
+            justify-content: center
+            max-height: 15px
+            margin: 0
+            overflow: hidden
+                    
+        .area-container
+            padding: .1rem
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin: 10px 0
+            
+            border: none
+            nav
+                width: 100%
+                display: flex
+                gap: 10px
+                color: #fff
+                padding: 3px 7px
+                font-size: .8rem
+            textarea
+                display: none
+                background: transparent
+                border: none
+                outline: none
+                resize: none
+                width: 100%
+                color: #ffffff
+                font-size: 1.2rem
+                padding: 5px 7px
+        .checked
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin: 10px 0
+            padding: 3px 9px
+            figure
+                display: flex
+                #my-check
+                    background: red        
+                p,a
+                    padding: 0 5px 
+                    color: #fff
+                    text-decoration: none
+                    font-size: .8rem
+        .btn-env
+            width: 100%
+            padding: .3rem
+            font-size: 1.5rem
+            margin-top: 1rem 
+            border: none
+            outline: none
+            transition: .4s
+            color: #000
+            background-color: #fff
+            cursor: pointer
+            &:hover
+                background: #000
+                color: #fff
+
+
