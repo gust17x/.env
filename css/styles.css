@@ -120,6 +120,11 @@ body .content .area-container textarea {
   border-radius: 15px;
   margin: 10px 0;
 }
+
+body .content .area-container textarea::placeholder{
+  color: rgba(243, 243, 243, 0.882);
+}
+
 body .content .checked {
   display: flex;
   align-items: center;
